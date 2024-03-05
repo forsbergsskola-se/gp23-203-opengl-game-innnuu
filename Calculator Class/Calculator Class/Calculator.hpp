@@ -35,6 +35,21 @@ public:
                 
             case Operations::add:
                 number +=num;
+                break;
+                
+            case Operations::Subtract:
+                number -= num;
+                break;
+                
+            case Operations::Multiply:
+                number *= num;
+                break;
+                
+            case Operations::Divide:
+                number /=num;
+                break;
+                
+                
         }
     }
 
