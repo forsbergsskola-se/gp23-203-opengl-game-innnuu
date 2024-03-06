@@ -22,12 +22,15 @@ public:
                 break;
             case Operations::add:
                 number +=num;
+                currentOperation= Operations::None;
                 break;
             case Operations::Subtract:
                 number -= num;
+                currentOperation= Operations::None;
                 break;
             case Operations::Multiply:
                 number *= num;
+                currentOperation= Operations::None;
                 break;
                 
             case Operations::Divide:
@@ -57,14 +60,17 @@ int main(){
     calculator.SetNumber(5);
     calculator.SetOperation(Operations::add);
     calculator.SetNumber(3); //this should be 8
-    printf("%f",calculator.getNumber());
+    
+    cout << calculator.getNumber() << "\n";
+    
     calculator.clear(); // Reset calculator
     calculator.SetNumber(2); // Set new initial number
     calculator.SetOperation(Operations::Multiply); // Set operation to Multiply
     calculator.SetNumber(3); // Perform multiplication
     calculator.SetOperation(Operations::Subtract); // Set operation to Subtract
     calculator.SetNumber(1); // Perform subtraction, should output 5
-    printf("%f",calculator.getNumber());
+    
+    cout << calculator.getNumber() << "\n";
     return 0;
 };
 
